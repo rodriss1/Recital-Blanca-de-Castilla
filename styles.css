@@ -1,4 +1,4 @@
-* {
+html {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -13,16 +13,11 @@ body {
 
 
 
-/* ? ----- PORTADA ----- */
-.portada {
-	width: 100%;
-	background: #EFEFEF;
+/* ----- PORTADA ----- */
+.main {
+	background-color: #EFEFEF;
 
 	min-height: 100vh;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
 
 	display: flex;
 	flex-direction: column;
@@ -32,32 +27,28 @@ body {
 	transition: .5s ease-out all;
 }
 
-.portada.oculta {
+.main.oculta {
 	transform: translateY(100%);
 }
 
-.portada .header {
+.main .header {
 	margin-bottom: 100px;
 	text-transform: uppercase;
 	letter-spacing: 3px;
 }
 
-.portada .header .logotipo {
-	font-size: 50px;
-	font-size: 900;
-	margin-bottom: 20px;
-}
-
-.portada .header .mensaje {
-	font-size: 30px;
-	font-weight: 600;
-}
-
 /* ? ----- Cuenta Regresiva ----- */
 #cuenta {
-	display: flex;
+	display: grid;
+	grid-template-columns: auto auto;
+	gap: 1rem;
 	justify-content: center;
-	margin-bottom: 100px;
+	margin: 30px;
+	margin-bottom: 60px;
+}
+
+@media (min-width: 1200px) {
+  #cuenta { grid-template-columns: repeat(4, 1fr); }
 }
 
 .simply-section {
